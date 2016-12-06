@@ -19,7 +19,7 @@ class SilentActor01Test extends TestKit(ActorSystem("testsystem"))
   }
 }
 
-class SilentActor extends Actor {
+class SilentActor01 extends Actor {
   def receive = {
     case msg =>
   }
