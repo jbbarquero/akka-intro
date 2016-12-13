@@ -73,7 +73,7 @@ trait TicketInfoService extends WebServiceCalls {
 
     futureRoute.zip(futurePublicTransport).map {
       case(route, publicTransportAdvice) =>
-        val travelAdvice: TravelAdvice(route, publicTransportAdvice)
+        val travelAdvice = TravelAdvice(route, publicTransportAdvice)
         ticketInfo.copy(travelAdvice = Some(travelAdvice))
     }
 

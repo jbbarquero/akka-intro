@@ -1,6 +1,6 @@
-package com.malsolo.scala.akkainaction
+package com.malsolo.scala.akkainaction.up_and_running
 
-import akka.actor.{ Actor, Props, PoisonPill }
+import akka.actor.{Actor, PoisonPill, Props}
 object TicketSeller {
   def props(event: String) = Props(new TicketSeller(event))
 

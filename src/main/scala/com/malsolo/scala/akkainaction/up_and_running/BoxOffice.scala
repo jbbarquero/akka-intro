@@ -1,10 +1,9 @@
-package com.malsolo.scala.akkainaction
-
-import scala.concurrent.duration._
-import scala.concurrent.Future
+package com.malsolo.scala.akkainaction.up_and_running
 
 import akka.actor._
 import akka.util.Timeout
+
+import scala.concurrent.Future
 
 object BoxOffice {
   def props(implicit timeout: Timeout) = Props(new BoxOffice)
@@ -63,8 +62,7 @@ class BoxOffice(implicit timeout: Timeout) extends Actor {
 
 
     case GetEvents =>
-      import akka.pattern.ask
-      import akka.pattern.pipe
+      import akka.pattern.{ask, pipe}
 
       def getEvents = context.children.map { child =>
         self.ask(GetEvent(child.path.name)).mapTo[Option[Event]]

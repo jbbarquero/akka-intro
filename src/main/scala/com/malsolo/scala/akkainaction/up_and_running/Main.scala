@@ -1,17 +1,14 @@
-package com.malsolo.scala.akkainaction
+package com.malsolo.scala.akkainaction.up_and_running
 
-import scala.concurrent.Future
-
-import akka.actor.{ ActorSystem , Actor, Props }
+import akka.actor.ActorSystem
 import akka.event.Logging
-import akka.util.Timeout
-
 import akka.http.scaladsl.Http
 import akka.http.scaladsl.Http.ServerBinding
-import akka.http.scaladsl.server.Directives._
 import akka.stream.ActorMaterializer
+import akka.util.Timeout
+import com.typesafe.config.{Config, ConfigFactory}
 
-import com.typesafe.config.{ Config, ConfigFactory }
+import scala.concurrent.Future
 
 
 

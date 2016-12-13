@@ -10,6 +10,7 @@ libraryDependencies ++= {
   Seq(
     "com.typesafe.akka" %% "akka-actor" % akkaVersion,
     "com.typesafe.akka" %% "akka-remote" % akkaVersion,
+    "com.typesafe.akka" %% "akka-multi-node-testkit" % akkaVersion,
 
     "com.typesafe.akka" %% "akka-http-core" % akkaHTTPVersion,
     "com.typesafe.akka" %% "akka-http" % akkaHTTPVersion,

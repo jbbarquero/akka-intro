@@ -1,4 +1,4 @@
-package com.malsolo.scala.akkainaction
+package com.malsolo.scala.akkainaction.up_and_running
 
 import spray.json._
 
